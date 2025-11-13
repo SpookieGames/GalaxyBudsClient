@@ -120,6 +120,21 @@ internal class TrayManager
         await RebuildAsync();
     }
 
+    private static string GetBatteryIcon(int batteryLevel)
+    {
+        // Using battery emoji and visual bar representation for better clarity
+        return batteryLevel switch
+        {
+            < 5 => "🪫",      // Empty battery emoji
+            < 15 => "🔋▁",    // Battery + very low bar
+            < 30 => "🔋▂",    // Battery + low bar
+            < 50 => "🔋▄",    // Battery + medium-low bar
+            < 70 => "🔋▆",    // Battery + medium-high bar
+            < 90 => "🔋▇",    // Battery + high bar
+            _ => "🔋█"        // Battery + full bar
+        };
+    }
+
     private static IEnumerable<NativeMenuItemBase?> RebuildBatteryInfo()
     {
         var bsu = DeviceMessageCache.Instance.BasicStatusUpdate!;
@@ -132,13 +147,13 @@ internal class TrayManager
         return
         [
             bsu.BatteryL > 0
-                ? new NativeMenuItem($"{Strings.Left}: {bsu.BatteryL}%") { IsEnabled = false }
+                ? new NativeMenuItem($"{GetBatteryIcon(bsu.BatteryL)} {Strings.Left}: {bsu.BatteryL}%") { IsEnabled = false }
                 : null,
             bsu.BatteryR > 0
-                ? new NativeMenuItem($"{Strings.Right}: {bsu.BatteryR}%") { IsEnabled = false }
+                ? new NativeMenuItem($"{GetBatteryIcon(bsu.BatteryR)} {Strings.Right}: {bsu.BatteryR}%") { IsEnabled = false }
                 : null,
             batteryCase is > 0 and <= 100 && BluetoothImpl.Instance.DeviceSpec.Supports(Features.CaseBattery)
-                ? new NativeMenuItem($"{Strings.Case}: {batteryCase}%") { IsEnabled = false }
+                ? new NativeMenuItem($"{GetBatteryIcon(batteryCase)} {Strings.Case}: {batteryCase}%") { IsEnabled = false }
                 : null,
 
             new NativeMenuItemSeparator()

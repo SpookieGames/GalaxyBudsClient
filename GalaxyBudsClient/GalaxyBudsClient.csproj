@@ -1,29 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="Platform.props" />
-    
-    <!-- Framework & platform-dependent properties -->
     <!--
-      IMPORTANT: TargetFrameworks must be stable across all TargetFramework evaluations (NuGet restore requirement).
-      Use host OS detection for selecting the TargetFrameworks set, not the per-TargetFramework IsWindows/IsOSX flags.
+      Use an OS-specific TargetFramework to make use of platform-specific APIs on Windows and macOS.
+      Otherwise, fall back to net10.0 for Linux and other platforms.
     -->
-    <PropertyGroup Condition="'$(_HostIsWindows)'=='true'">
-        <TargetFrameworks>net10.0-windows10.0.19041;net10.0</TargetFrameworks>
+    <Import Project="Host.props" />
+    <PropertyGroup Condition="'$(_HostIsWindows)'=='true' And '$(IsAndroid)'!='true'">
+        <TargetFramework>net10.0-windows10.0.19041</TargetFramework>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(_HostIsOSX)'=='true'">
-        <TargetFrameworks>net10.0-macos;net10.0</TargetFrameworks>
+    <PropertyGroup Condition="'$(_HostIsOSX)'=='true' And '$(IsAndroid)'!='true'">
+        <TargetFramework>net10.0-macos</TargetFramework>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(_HostIsLinux)'=='true'">
-        <TargetFrameworks>net10.0</TargetFrameworks>
-        <!--<PublishTrimmed>true</PublishTrimmed>-->
+    <PropertyGroup Condition="'$(TargetFramework)'==''">
+        <TargetFramework>net10.0</TargetFramework>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)'=='net10.0-windows10.0.19041'">
+    <!-- Detect target platform -->
+    <Import Project="Platform.props" />
+    <PropertyGroup Condition="'$(IsWindows)'=='true'">
         <OutputType>WinExe</OutputType>
 
-        <!-- Causes crashes on Windows: https://github.com/dotnet/runtime/issues/121596 -->
+        <!-- Causes crashes on Windows 10/11 if not fully updated: https://github.com/dotnet/runtime/issues/121596 -->
         <CetCompat>false</CetCompat>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(TargetFramework)'=='net10.0-macos'">
+    <PropertyGroup Condition="'$(IsOSX)'=='true'">
         <OutputType>Exe</OutputType>
 
         <RuntimeIdentifiers>osx-x64;osx-arm64</RuntimeIdentifiers>
@@ -31,10 +30,10 @@
         <AssemblyName>Galaxy Buds Manager</AssemblyName>
         <SupportedOSPlatformVersion>12.0</SupportedOSPlatformVersion>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(IsLinux)'=='true' And '$(TargetFramework)'=='net10.0'">
+    <PropertyGroup Condition="'$(IsLinux)'=='true'">
         <OutputType>Exe</OutputType>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(IsAndroid)'=='true' And '$(TargetFramework)'=='net10.0'">
+    <PropertyGroup Condition="'$(IsAndroid)'=='true'">
         <OutputType>Library</OutputType>
         <DefineConstants>$(DefineConstants);Android</DefineConstants>
     </PropertyGroup>
@@ -134,16 +133,16 @@
 
 
     <!-- Project references -->
-    <ItemGroup Condition="'$(TargetFramework)'=='net10.0-windows10.0.19041'">
+    <ItemGroup Condition="'$(IsWindows)'=='true'">
         <ProjectReference Include="..\GalaxyBudsClient.Platform.WindowsRT\GalaxyBudsClient.Platform.WindowsRT.csproj" />
         <ProjectReference Include="..\GalaxyBudsClient.Platform.Windows\GalaxyBudsClient.Platform.Windows.csproj" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(IsLinux)'=='true' And '$(TargetFramework)'=='net10.0'">
+    <ItemGroup Condition="'$(IsLinux)'=='true'">
         <ProjectReference Include="..\GalaxyBudsClient.Platform.Linux\GalaxyBudsClient.Platform.Linux.csproj" />
     </ItemGroup>
     
-    <ItemGroup Condition="'$(TargetFramework)'=='net10.0-macos'">
+    <ItemGroup Condition="'$(IsOSX)'=='true'">
         <ProjectReference Include="..\GalaxyBudsClient.Platform.OSX\GalaxyBudsClient.Platform.OSX.csproj" />
     </ItemGroup>
     

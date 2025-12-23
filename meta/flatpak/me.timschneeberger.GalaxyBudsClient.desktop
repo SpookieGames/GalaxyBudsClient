@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Galaxy Buds Manager
-Comment=Unofficial Galaxy Buds Manager for Windows and Linux
-Exec=GalaxyBudsClient
-Icon=me.timschneeberger.GalaxyBudsClient
-Type=Application
-Categories=Utility;
-Keywords=samsung;galaxy;buds;headphone;bluetooth;

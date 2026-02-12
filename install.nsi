@@ -24,6 +24,9 @@
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 
+; Writes to Program Files and HKLM, so require elevation explicitly.
+RequestExecutionLevel admin
+
 ; MUI 1.67 compatible ------
 !include "MUI.nsh"
 

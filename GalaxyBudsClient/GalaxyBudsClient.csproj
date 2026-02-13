@@ -115,7 +115,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.3" />
         <PackageReference Include="ReactiveUI.Fody" Version="19.5.41" /> <!-- Needed due to workaround in SettingsData.cs -->
         <PackageReference Include="ReactiveUI.SourceGenerators" Version="2.5.1" PrivateAssets="all" />
         <PackageReference Include="ScottPlot.Avalonia" Version="5.1.57" />

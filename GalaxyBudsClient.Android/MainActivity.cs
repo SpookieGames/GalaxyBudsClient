@@ -12,7 +12,7 @@ using GalaxyBudsClient.Platform;
 using ReactiveUI.Avalonia;
 using AlertDialog = AndroidX.AppCompat.App.AlertDialog;
 
-#if NOT_DEBUGGABLE
+#if DEBUG && !NotDebuggable
 [assembly: Application(Debuggable=true)]
 #else
 [assembly: Application(Debuggable=false)]

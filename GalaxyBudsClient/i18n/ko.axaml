@@ -639,4 +639,225 @@
     <sys:String x:Key="rename_ok_title">번경 완료</sys:String>
     <sys:String x:Key="rename_ok">이름 번경에 성공했어요.
 이어버드의 페어링을 해제했다가 다시 페어링할 때까지 기기에서 이름 변경을 감지하지 못할 수 있어요.</sys:String>
+
+    <!--Missing strings (batch 1)-->
+    <sys:String x:Key="both">양쪽</sys:String>
+    <sys:String x:Key="next">다음</sys:String>
+    <sys:String x:Key="prev">이전</sys:String>
+    <sys:String x:Key="off">끄기</sys:String>
+    <sys:String x:Key="on">켜기</sys:String>
+    <sys:String x:Key="hint">참고</sys:String>
+    <sys:String x:Key="help">도움말</sys:String>
+    <sys:String x:Key="important">중요</sys:String>
+    <sys:String x:Key="home">홈</sys:String>
+    <sys:String x:Key="read_failed">파일을 읽지 못했어요. 접근 권한을 확인해 주세요.</sys:String>
+    <sys:String x:Key="please_wait">잠시만 기다려 주세요...</sys:String>
+    <sys:String x:Key="value_left_right_inline">왼쪽: {0}, 오른쪽: {1}</sys:String>
+    <sys:String x:Key="value_left_right_multiline">왼쪽: {0}
+오른쪽: {1}</sys:String>
+    <sys:String x:Key="other_x">기타 ({0})</sys:String>
+    <sys:String x:Key="no_data_stored">저장된 데이터 없음</sys:String>
+    <sys:String x:Key="not_available">사용할 수 없음</sys:String>
+    <sys:String x:Key="last_updated_at_n">마지막 업데이트: {0}</sys:String>
+    <sys:String x:Key="file_not_found">파일을 찾을 수 없어요.</sys:String>
+    <sys:String x:Key="feature_unsupported_platform">현재 플랫폼에서는 이 기능을 지원하지 않아요.</sys:String>
+    <sys:String x:Key="adaptive">적응형</sys:String>
+    <sys:String x:Key="darkmode_blur_enabled">켜기 (블러 효과 포함)</sys:String>
+    <sys:String x:Key="darkmode_mica_enabled">켜기 (Mica 효과 포함)</sys:String>
+    <sys:String x:Key="placement_charging">충전 중</sys:String>
+    <sys:String x:Key="touchoption_custom_trigger_event">이어버드 동작 실행...</sys:String>
+    <sys:String x:Key="hotkey_add_short">새로 만들기</sys:String>
+    <sys:String x:Key="hotkey_edit_long">기존 단축키 편집</sys:String>
+    <sys:String x:Key="event_nc_switch_one">이어버드 한쪽만으로 소음 제어 전환</sys:String>
+    <sys:String x:Key="welcome_register">이어버드 설정하기</sys:String>
+    <sys:String x:Key="welcome_register_desc">Galaxy Buds를 선택하고 등록해 주세요.</sys:String>
+    <sys:String x:Key="welcome_android_hint_title">Android 사용자 중요 안내</sys:String>
+    <sys:String x:Key="welcome_android_hint">이 앱은 원래 데스크톱 컴퓨터용으로 설계되었어요. 사용자 지정 터치 동작, 배터리 통계처럼 앱이 백그라운드에서 실행되어야 하는 기능은 현재 버전에서 사용할 수 없어요.
+공식 삼성 웨어러블 앱을 이 앱과 함께 실행하면 연결 문제가 생길 수 있어요. 이 앱을 사용하기 전에 공식 앱이 완전히 종료되었는지 확인해 주세요.</sys:String>
+    <sys:String x:Key="mainpage_header">홈</sys:String>
+    <sys:String x:Key="mainpage_fit_test">이어버드 착용 테스트</sys:String>
+    <sys:String x:Key="devsel_manual_pair_title">기기가 목록에 없나요?</sys:String>
+    <sys:String x:Key="devsel_manual_pair_description">이어버드가 이미 페어링되어 있는지 확인해 주세요. 그래도 인식되지 않으면 수동 연결 옵션을 사용해 보세요.</sys:String>
+    <sys:String x:Key="devices_header">페어링된 기기</sys:String>
+    <sys:String x:Key="devices_new">새로 추가</sys:String>
+    <sys:String x:Key="devices_new_long">새 기기 페어링</sys:String>
+    <sys:String x:Key="devices_select_inactive">선택</sys:String>
+    <sys:String x:Key="devices_select_active">선택됨</sys:String>
+    <sys:String x:Key="devices_delete">삭제</sys:String>
+    <sys:String x:Key="devices_delete_long">기기 삭제</sys:String>
+    <sys:String x:Key="devices_delete_confirmation">이 기기를 제거할까요?</sys:String>
+    <sys:String x:Key="devices_settings_link">페어링된 기기 관리</sys:String>
+    <sys:String x:Key="devices_settings_link_desc">기기를 추가/삭제하거나 기본 기기를 선택해요.</sys:String>
+    <sys:String x:Key="touchpad_gesture_double_for_call">통화 중 두 번 탭</sys:String>
+    <sys:String x:Key="touchpad_gesture_double_for_call_desc">전화 받기 또는 통화 종료</sys:String>
+    <sys:String x:Key="touchpad_gesture_hold_for_call">통화 중 길게 누르기</sys:String>
+    <sys:String x:Key="touchpad_gesture_hold_for_call_desc">통화 거절</sys:String>
+    <sys:String x:Key="touchpad_default_action">기본 터치 동작</sys:String>
+    <sys:String x:Key="touchpad_noise_control_mode_l">소음 제어 전환 모드 (왼쪽)</sys:String>
+    <sys:String x:Key="touchpad_noise_control_mode_r">소음 제어 전환 모드 (오른쪽)</sys:String>
+    <sys:String x:Key="touchpad_noise_control_mode_desc">순환할 모드를 선택해 주세요.</sys:String>
+    <sys:String x:Key="cact_function_param">기능</sys:String>
+    <sys:String x:Key="cact_hotkey_param">단축키</sys:String>
+    <sys:String x:Key="cact_path_param">파일 경로</sys:String>
+    <sys:String x:Key="system_hidden_at_mode">숨겨진 시스템 설정</sys:String>
+    <sys:String x:Key="system_hidden_at_mode_desc">시리얼 번호, UART 상태 같은 숨겨진 설정을 편집해요.</sys:String>
+    <sys:String x:Key="system_usage_reports">사용량 및 측정 보고서</sys:String>
+    <sys:String x:Key="system_usage_reports_desc">이어버드가 제공하는 사용량 보고서를 확인해요.</sys:String>
+    <sys:String x:Key="system_battery_statistics">배터리 통계</sys:String>
+    <sys:String x:Key="system_battery_statistics_desc">배터리 사용 통계를 수집하고 확인해요.</sys:String>
+    <sys:String x:Key="system_no_response">이어버드에서 응답이 없어요.</sys:String>
+    <sys:String x:Key="system_cradle_swver">케이스 소프트웨어 버전</sys:String>
+    <sys:String x:Key="system_cradle_serial">케이스 일련번호</sys:String>
+    <sys:String x:Key="system_btaddr_template">로컬 주소: {0}, 피어 주소: {1}</sys:String>
+    <sys:String x:Key="system_sku">기기 SKU</sys:String>
+
+    <!--Missing strings (batch 2)-->
+    <sys:String x:Key="hidden_mode_warning">주의해서 진행해 주세요</sys:String>
+    <sys:String x:Key="hidden_mode_warning_desc">이 페이지에서 변경한 일부 설정은 공장 초기화로도 되돌릴 수 없어요. 일부 모델에서는 이 설정을 지원하지 않아요.</sys:String>
+    <sys:String x:Key="hidden_mode_target">대상 기기: {0} 이어버드</sys:String>
+    <sys:String x:Key="hidden_mode_target_l_desc">왼쪽 이어버드를 수정하려면 오른쪽 이어버드를 케이스에 넣고 덮개를 닫아 주세요.</sys:String>
+    <sys:String x:Key="hidden_mode_target_r_desc">오른쪽 이어버드를 수정하려면 왼쪽 이어버드를 케이스에 넣고 덮개를 닫아 주세요.</sys:String>
+    <sys:String x:Key="hidden_mode_input_wrong_length">새 값은 정확히 {0}자여야 해요.</sys:String>
+    <sys:String x:Key="hidden_mode_uart_on_confirm">UART가 성공적으로 활성화되었어요.</sys:String>
+    <sys:String x:Key="hidden_mode_uart_off_confirm">UART가 성공적으로 비활성화되었어요.</sys:String>
+    <sys:String x:Key="hidden_mode_uart">UART 포트 활성화</sys:String>
+    <sys:String x:Key="hidden_mode_uart_desc">현재 대상 기기의 PCB 물리 UART 포트를 디버깅 목적으로 일시적으로 활성화해요.</sys:String>
+    <sys:String x:Key="hidden_mode_power">전원 메뉴</sys:String>
+    <sys:String x:Key="hidden_mode_power_desc">현재 대상 기기를 종료, 재부팅 또는 절전 상태로 전환해요.</sys:String>
+    <sys:String x:Key="hidden_mode_serial_change">일련번호 변경</sys:String>
+    <sys:String x:Key="hidden_mode_serial_change_desc">현재 대상 기기의 일련번호를 변경해요.</sys:String>
+    <sys:String x:Key="hidden_mode_did_change">DID 번호 및 색상 변경</sys:String>
+    <sys:String x:Key="hidden_mode_did_change_desc">현재 대상 기기의 모델 ID를 변경해요.</sys:String>
+    <sys:String x:Key="hidden_mode_sku_change">SKU 코드 변경</sys:String>
+    <sys:String x:Key="hidden_mode_sku_change_desc">현재 대상 기기의 제품 코드를 변경해요.</sys:String>
+    <sys:String x:Key="hidden_mode_bt_peer_addr_change">피어 블루투스 주소 변경</sys:String>
+    <sys:String x:Key="hidden_mode_bt_peer_change_desc">현재 대상 기기의 피어 블루투스 주소를 변경해요.</sys:String>
+    <sys:String x:Key="hidden_mode_bt_local_addr_change">로컬 블루투스 주소 변경</sys:String>
+    <sys:String x:Key="hidden_mode_bt_local_change_desc">현재 대상 기기의 로컬 블루투스 주소를 변경해요.</sys:String>
+    <sys:String x:Key="hidden_mode_terminal">숨겨진 명령 터미널</sys:String>
+    <sys:String x:Key="hidden_mode_terminal_desc">현재 대상 기기에 사용자 지정 AT 명령을 전송해요.</sys:String>
+    <sys:String x:Key="power_menu_hint">현재 선택된 대상 이어버드에만 적용돼요.</sys:String>
+    <sys:String x:Key="power_menu_reboot">재부팅</sys:String>
+    <sys:String x:Key="power_menu_shutdown">전원 끄기</sys:String>
+    <sys:String x:Key="power_menu_sleep">공장 절전 모드</sys:String>
+    <sys:String x:Key="at_terminal_cmd_id">명령 ID</sys:String>
+    <sys:String x:Key="at_terminal_cmd_param">명령 파라미터 (선택)</sys:String>
+    <sys:String x:Key="at_terminal_cmd_id_invalid">이 명령 ID는 올바르지 않아요. 0007 또는 004C 같은 16비트 16진수 값을 입력해 주세요.</sys:String>
+    <sys:String x:Key="at_terminal_output">출력</sys:String>
+    <sys:String x:Key="at_terminal_send">전송</sys:String>
+    <sys:String x:Key="usage_reports_header">사용량 보고서</sys:String>
+    <sys:String x:Key="usage_reports_hint">이 보고서는 이어버드 자체에서 수집돼요. 데이터는 가공 없이 표시되므로 정확하지 않을 수 있어요. 공식 Wearable 앱에서 데이터 수집에 동의한 경우, 앱은 대부분의 카운터를 주기적으로 초기화한 뒤 수집된 데이터를 삼성으로 전송해요. 충전 사이클 같은 일부 카운터는 초기화되지 않아요.</sys:String>
+    <sys:String x:Key="usage_reports_usage">사용량 보고서</sys:String>
+    <sys:String x:Key="usage_reports_metering">계측 보고서</sys:String>
+    <sys:String x:Key="milliamp_hours_unit">{0}mAh</sys:String>
+    <sys:String x:Key="metering_total_batt_capacity">총 배터리 용량</sys:String>
+    <sys:String x:Key="metering_a2dp_time">음악 재생 사용 시간 (A2DP)</sys:String>
+    <sys:String x:Key="metering_esco_time">통화 사용 시간 (eSCO)</sys:String>
+    <sys:String x:Key="batt_hist_hint">이 앱은 시간에 따른 배터리 잔량과 기본 사용 데이터를 수집해서 배터리 소모를 분석할 수 있어요. 데이터는 이 앱이 백그라운드에서 실행 중이고 이어버드가 이 기기에 연결되어 있을 때만 수집돼요.</sys:String>
+    <sys:String x:Key="batt_hist_no_data_title">데이터 부족</sys:String>
+    <sys:String x:Key="batt_hist_no_data">데이터가 충분히 수집된 뒤 다시 확인하거나, 표시 기간을 조정해 주세요.</sys:String>
+    <sys:String x:Key="batt_hist_y_axis">충전량 (%)</sys:String>
+    <sys:String x:Key="batt_hist_last_hour">최근 1시간</sys:String>
+    <sys:String x:Key="batt_hist_last_6_hours">최근 6시간</sys:String>
+    <sys:String x:Key="batt_hist_last_12_hours">최근 12시간</sys:String>
+    <sys:String x:Key="batt_hist_last_24_hours">최근 24시간</sys:String>
+    <sys:String x:Key="batt_hist_last_3_days">최근 3일</sys:String>
+    <sys:String x:Key="batt_hist_last_7_days">최근 7일</sys:String>
+    <sys:String x:Key="batt_hist_overlay_none">오버레이 없음</sys:String>
+    <sys:String x:Key="batt_hist_overlay_noise_controls">소음 제어</sys:String>
+    <sys:String x:Key="batt_hist_overlay_wearing">착용 상태</sys:String>
+    <sys:String x:Key="batt_hist_overlay_host_device">호스트 기기</sys:String>
+    <sys:String x:Key="batt_hist_overlay_legend">{0} (오버레이)</sys:String>
+    <sys:String x:Key="batt_hist_tools_pan_and_zoom">이동 및 확대/축소</sys:String>
+    <sys:String x:Key="batt_hist_tools_measure_time">시간 측정</sys:String>
+    <sys:String x:Key="batt_hist_tools_measure_battery">배터리 수준 측정</sys:String>
+    <sys:String x:Key="batt_hist_show_legend">범례 표시</sys:String>
+
+    <!--Missing strings (batch 3)-->
+    <sys:String x:Key="batt_hist_measure_difference_display">차이: {0}</sys:String>
+    <sys:String x:Key="batt_hist_measure_timespan_display">시간 범위: {0}</sys:String>
+    <sys:String x:Key="batt_hist_measure_timespan_unit_long">d'일 'hh'시간 'mm'분 'ss'초'</sys:String>
+    <sys:String x:Key="batt_hist_time_span_tip_title">시간 범위</sys:String>
+    <sys:String x:Key="batt_hist_control_tip_title">마우스 조작</sys:String>
+    <sys:String x:Key="batt_hist_control_tip">그래프를 이동하려면 캔버스를 드래그해 주세요.
+
+스크롤하면 가로/세로로 확대 또는 축소할 수 있어요.
+
+X축이나 Y축 위에 마우스를 올린 상태에서 스크롤하면 해당 축만 확대/축소돼요. 예를 들어 X축(시간)에서 스크롤하면 시간 축만 늘어나거나 줄어들어요.</sys:String>
+    <sys:String x:Key="batt_hist_overlay_tip_title">오버레이</sys:String>
+    <sys:String x:Key="batt_hist_overlay_tip">오버레이를 사용하면 그래프에 추가 맥락 정보를 표시할 수 있어요.
+
+소음 제어: 어떤 소음 제어 모드가 켜지거나 꺼졌는지 표시해요.
+
+착용 상태: 이어버드 착용 여부를 표시해요.
+
+호스트 기기: 컴퓨터와의 블루투스 연결을 어떤 이어버드가 담당하는지 표시해요.
+
+넓은 시간 범위를 볼 때 오버레이 데이터가 이해하기 어려울 수 있어요. 더 쉽게 보려면 X축에 마우스를 올리고 위로 스크롤해서 확인하려는 시간 구간으로 확대해 보세요.</sys:String>
+    <sys:String x:Key="batt_hist_tools_tip_title">도구</sys:String>
+    <sys:String x:Key="batt_hist_tools_tip">이동 및 확대/축소: 기본 모드예요. 이동과 확대/축소로 그래프를 탐색해요.
+
+시간 측정: 가로 범위를 선택해 선택 시작과 끝 사이의 경과 시간을 측정해요.
+
+배터리 수준 측정: 세로 범위를 선택해 선택 시작과 끝 사이의 배터리 잔량 차이를 측정해요.</sys:String>
+    <sys:String x:Key="settings_save_fail_no_access">설정을 저장하지 못했어요. 운영체제에서 구성 파일 접근을 거부했어요. {0}의 파일 권한을 확인해 주세요.</sys:String>
+    <sys:String x:Key="settings_appearance">모양</sys:String>
+    <sys:String x:Key="settings_blurstrength">창 블러 강도</sys:String>
+    <sys:String x:Key="settings_blurstrength_description">다크 모드에서만 사용할 수 있어요. 일부 시스템에서는 지원되지 않아요.</sys:String>
+    <sys:String x:Key="settings_accent">강조 색상</sys:String>
+    <sys:String x:Key="settings_accent_description">사용자 지정 강조 색상을 선택해요.</sys:String>
+    <sys:String x:Key="settings_localization_description">앱 언어를 변경해요.</sys:String>
+    <sys:String x:Key="settings_realistic_earbud_icons">실물형 이어버드 이미지 사용</sys:String>
+    <sys:String x:Key="settings_realistic_earbud_icons_description">지원되는 경우 이어버드의 실제 색상을 반영한 이미지를 표시해요.</sys:String>
+    <sys:String x:Key="settings_color_override">이어버드 색상 재정의</sys:String>
+    <sys:String x:Key="settings_color_override_description">앱에서 표시되는 이어버드 색상을 변경해요.</sys:String>
+    <sys:String x:Key="settings_nav_sidebar">탐색 사이드바</sys:String>
+    <sys:String x:Key="settings_nav_sidebar_description">왼쪽 탐색 버튼 표시 여부를 선택해요.</sys:String>
+    <sys:String x:Key="settings_tray_settings">트레이 아이콘 및 시작 옵션</sys:String>
+    <sys:String x:Key="settings_dyn_tray_mode">동적 트레이 아이콘</sys:String>
+    <sys:String x:Key="settings_dyn_tray_mode_description">트레이 아이콘에 배터리 상태를 표시해요.</sys:String>
+    <sys:String x:Key="settings_dyn_tray_mode_off">끄기</sys:String>
+    <sys:String x:Key="settings_dyn_tray_mode_battery_min">가장 낮은 배터리 잔량 표시</sys:String>
+    <sys:String x:Key="settings_dyn_tray_mode_battery_avg">평균 배터리 잔량 표시</sys:String>
+    <sys:String x:Key="settings_devmode_description">블루투스 트래픽 검사기 및 기타 개발자 도구</sys:String>
+    <sys:String x:Key="settings_cpopup_position_description">연결 팝업의 위치를 선택해요.</sys:String>
+    <sys:String x:Key="factory_confirmation">이어버드를 공장 초기화할까요?
+이 작업을 진행하면 이어버드의 모든 데이터와 설정이 삭제돼요.
+
+계속하기 전에 양쪽 이어버드가 모두 켜져 있는지 확인해 주세요.</sys:String>
+    <sys:String x:Key="eq_enable_description">EQ 오디오 필터를 적용해요.</sys:String>
+    <sys:String x:Key="nc_as_anc_description">주변 소음을 줄여요.</sys:String>
+    <sys:String x:Key="nc_one_earbud">이어버드 한쪽 소음 제어</sys:String>
+    <sys:String x:Key="nc_one_earbud_description">불편함 방지를 위해 소음 제어는 보통 양쪽 이어버드가 필요해요. 이 옵션을 켜면 한쪽 이어버드만으로도 사용할 수 있어요.</sys:String>
+    <sys:String x:Key="nc_voicedetect_timeout_description">일정 시간 동안 음성이 감지되지 않으면 설정을 원래대로 되돌려요.</sys:String>
+    <sys:String x:Key="nc_as_custom_description">주변 소리 듣기 설정을 사용자 지정해요.</sys:String>
+    <sys:String x:Key="as_header_description">주변 소리를 들을 수 있어요.</sys:String>
+    <sys:String x:Key="as_voicefocus_description">음성이 더 또렷하게 들리도록 해요.</sys:String>
+    <sys:String x:Key="adv_pause_playback">이어버드를 빼면 재생 일시중지</sys:String>
+    <sys:String x:Key="adv_pause_playback_desc">양쪽 근접 센서가 모두 덮여 있지 않을 때 전역 재생/일시중지 상태 변경 이벤트를 전송해요. (데스크톱 전용)</sys:String>
+    <sys:String x:Key="adv_callpath">통화 중 착용 감지</sys:String>
+    <sys:String x:Key="adv_callpath_desc">이어버드를 착용 중이면 통화를 이어버드로, 착용하지 않으면 컴퓨터 스피커로 재생해요.</sys:String>
+    <sys:String x:Key="adv_extra_clear_call">통화 음질 선명도 향상</sys:String>
+    <sys:String x:Key="adv_extra_clear_call_desc">통화 선명도를 높여요. 시끄러운 환경에서 이어버드를 사용할 때 특히 유용해요. 배터리를 더 많이 사용해요.</sys:String>
+    <sys:String x:Key="bixby_remap_lang_desc">활성화 문구에 사용할 언어를 변경해요.</sys:String>
+    <sys:String x:Key="bixby_remap_action_desc">이 기기에서 Bixby를 활성화했을 때 실행할 동작을 정해요.</sys:String>
+    <sys:String x:Key="credits_kofi">Ko-fi 페이지에서 후원해 주세요!</sys:String>
+    <sys:String x:Key="credits_github">GitHub에서 이 프로젝트 보기</sys:String>
+    <sys:String x:Key="connlost">연결이 끊겼어요</sys:String>
+    <sys:String x:Key="connlost_troubleshoot">문제 해결</sys:String>
+    <sys:String x:Key="connlost_troubleshoot_title">연결 문제 해결 방법</sys:String>
+    <sys:String x:Key="connlost_troubleshoot_content">공식 삼성 Wearable 앱이 백그라운드에서 이어버드에 연결을 시도하지 않도록 확인해 주세요.
+그렇지 않으면 공식 앱이 이어버드 제어권을 반복적으로 가져가려 하면서 연결이 매우 자주 끊길 수 있어요.
+
+이 문제를 해결하려면 아래 방법 중 하나를 사용해 주세요.
+
+• Wearable 앱에서 이어버드 페어링을 해제해요. (Wearable 앱에서 햄버거 메뉴 > '기기 관리'를 열고 목록에서 이어버드를 삭제하세요.)
+
+• 삼성 Wearable 앱용 Galaxy Buds 플러그인을 완전히 삭제해요.
+
+• 'Hail' 또는 'Ice Box' 같은 앱으로 삼성 Wearable 앱용 공식 Galaxy Buds 플러그인을 일시 정지(동결)해서 실행되지 않게 해요.
+    </sys:String>
+    <sys:String x:Key="pairingmode_done">이어버드가 페어링 모드로 전환되었고, 이 기기와의 연결이 해제되었어요.</sys:String>
+    <sys:String x:Key="window_open">열기</sys:String>
+    <sys:String x:Key="rename_warn">이어버드 이름 변경은 공식 앱에서 삼성 스마트폰으로 제한될 수 있어서, 사용자 지정 이름을 초기화하려면 이 앱이 필요할 수 있어요. 이름 변경은 이어버드를 페어링 해제 후 다시 페어링하기 전까지 다른 기기에서 감지되지 않을 수 있어요.</sys:String>
 </ResourceDictionary>

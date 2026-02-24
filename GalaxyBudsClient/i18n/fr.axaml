@@ -88,6 +88,7 @@
     <sys:String x:Key="tray_enable_anc">Activer la réduction de bruit active</sys:String>
     <sys:String x:Key="tray_disable_anc">Désactiver la réduction de bruit active</sys:String>
     <sys:String x:Key="tray_switch_noise">Changer le mode de contrôle du bruit</sys:String>
+    <sys:String x:Key="tray_show_battery_details">Show battery details</sys:String>
     <sys:String x:Key="tray_quit">Quitter</sys:String>
 
 
@@ -398,6 +399,8 @@ Vous devrez peut-être reconnecter vos écouteurs manuellement.</sys:String>
     <!--Advanced page-->
     <sys:String x:Key="adv_header">Paramètres avancés</sys:String>
     <sys:String x:Key="adv_required_firmware_later">{0} ou plus récent</sys:String>
+    <sys:String x:Key="adv_auto_reconnect">Automatic Bluetooth reconnection</sys:String>
+    <sys:String x:Key="adv_auto_reconnect_desc">Automatically reconnect to your earbuds when the connection is lost unexpectedly. Up to 5 retry attempts with smart timeout detection.</sys:String>
     <sys:String x:Key="adv_seamless">Connexion automatique des écouteurs</sys:String>
     <sys:String x:Key="adv_seamless_desc">Basculez rapidement entre des appareils à proximité sans déconnecter vos écouteurs ni activer le mode appairage</sys:String>
     <sys:String x:Key="adv_resume_playback">Reprendre/démarrer la lecture si les écouteurs sont portés</sys:String>

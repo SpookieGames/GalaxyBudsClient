@@ -4,7 +4,7 @@ This file is auto-generated and automatically updated. Do not modify this file m
 
 <table>
 <tr><th>Progress</th><th>Count</th></tr>
-<tr><td>90%</td><td>51 missing string(s)</td></tr>
+<tr><td>90%</td><td>54 missing string(s)</td></tr>
 </table>
 
 ### Missing strings
@@ -14,6 +14,7 @@ This file is auto-generated and automatically updated. Do not modify this file m
 <tr><td><code>read_failed</code></td><td>Failed to read file. Access denied.</td></tr>
 <tr><td><code>feature_unsupported_platform</code></td><td>This feature is currently not supported on this platform.</td></tr>
 <tr><td><code>adaptive</code></td><td>Adaptive</td></tr>
+<tr><td><code>tray_show_battery_details</code></td><td>Show battery details</td></tr>
 <tr><td><code>welcome_android_hint_title</code></td><td>Important information for Android users</td></tr>
 <tr><td><code>welcome_android_hint</code></td><td>This app was initially designed for use on desktop computers. Features that need this app to run in the background, such as custom touch actions and battery statistics, are currently unavailable in this version.
 If the official Samsung Wearable app is active alongside this app, connection issues may occur. Please make sure to close the official app properly before using this app.</td></tr>
@@ -56,6 +57,8 @@ If the official Samsung Wearable app is active alongside this app, connection is
 <tr><td><code>settings_color_override_description</code></td><td>Change the displayed color of your earbuds in the app</td></tr>
 <tr><td><code>settings_nav_sidebar</code></td><td>Navigation sidebar</td></tr>
 <tr><td><code>settings_nav_sidebar_description</code></td><td>Show or collapse the navigation buttons on the left hand side</td></tr>
+<tr><td><code>adv_auto_reconnect</code></td><td>Automatic Bluetooth reconnection</td></tr>
+<tr><td><code>adv_auto_reconnect_desc</code></td><td>Automatically reconnect to your earbuds when the connection is lost unexpectedly. Up to 5 retry attempts with smart timeout detection.</td></tr>
 <tr><td><code>adv_pause_playback</code></td><td>Pause playback if earbuds are taken off</td></tr>
 <tr><td><code>adv_pause_playback_desc</code></td><td>Sends a global play/pause state change event when both of the proximity sensors are uncovered (Desktop only)</td></tr>
 <tr><td><code>connlost_troubleshoot</code></td><td>Troubleshoot</td></tr>

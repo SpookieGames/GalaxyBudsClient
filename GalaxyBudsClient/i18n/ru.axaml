@@ -92,6 +92,7 @@
     <sys:String x:Key="tray_enable_anc">Включить активное шумоподавление</sys:String>
     <sys:String x:Key="tray_disable_anc">Выключить активное шумоподавление</sys:String>
     <sys:String x:Key="tray_switch_noise">Поменять режим шумоподавления</sys:String>
+    <sys:String x:Key="tray_show_battery_details">Show battery details</sys:String>
     <sys:String x:Key="tray_quit">Выход</sys:String>
 
     <!--:::::::: XAML files (static) ::::::::-->
@@ -561,6 +562,8 @@
 
     <!--Advanced page-->
     <sys:String x:Key="adv_header">Расширенные настройки</sys:String>
+    <sys:String x:Key="adv_auto_reconnect">Automatic Bluetooth reconnection</sys:String>
+    <sys:String x:Key="adv_auto_reconnect_desc">Automatically reconnect to your earbuds when the connection is lost unexpectedly. Up to 5 retry attempts with smart timeout detection.</sys:String>
     <sys:String x:Key="adv_seamless">Бесшовное подключение наушников</sys:String>
     <sys:String x:Key="adv_seamless_desc">Быстро подключайтесь к другим устройствам поблизости, без отключения наушников и режима сопряжения</sys:String>
     <sys:String x:Key="adv_pause_playback">Ставить воспроизведение на паузу, если наушники сняты</sys:String>

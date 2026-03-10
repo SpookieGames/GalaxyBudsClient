@@ -92,6 +92,7 @@ Höger: {1}</sys:String>
     <sys:String x:Key="tray_enable_anc">Aktivera aktiv brusreducering</sys:String>
     <sys:String x:Key="tray_disable_anc">Inaktivera aktiv brusreducering</sys:String>
     <sys:String x:Key="tray_switch_noise">Växla bullerkontroller</sys:String>
+    <sys:String x:Key="tray_show_battery_details">Show battery details</sys:String>
     <sys:String x:Key="tray_quit">Avsluta</sys:String>
  
     <!--:::::::: XAML files (static) ::::::::-->
@@ -560,6 +561,8 @@ Höger: {1}</sys:String>
 
     <!--Advanced page-->
     <sys:String x:Key="adv_header">Avancerade inställningar</sys:String>
+    <sys:String x:Key="adv_auto_reconnect">Automatic Bluetooth reconnection</sys:String>
+    <sys:String x:Key="adv_auto_reconnect_desc">Automatically reconnect to your earbuds when the connection is lost unexpectedly. Up to 5 retry attempts with smart timeout detection.</sys:String>
     <sys:String x:Key="adv_seamless">Sömlös öronproppsanslutning</sys:String>
     <sys:String x:Key="adv_seamless_desc">Byt snabbt till närliggande enheter utan att koppla bort dina öronproppar eller aktivera parningsläge</sys:String>
     <sys:String x:Key="adv_pause_playback">Pausa uppspelning när öronpropparna tas bort</sys:String>

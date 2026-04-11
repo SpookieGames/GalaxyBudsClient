@@ -155,6 +155,10 @@ public partial class MainWindow : StyledAppWindow
             
             // Ensure window state is normal before showing
             WindowState = WindowState.Normal;
+            
+            // Reset to fixed dimensions to prevent size drift on repeated opens
+            Width = 700;
+            Height = 640;
                 
             if (PlatformUtils.IsLinux)
             {

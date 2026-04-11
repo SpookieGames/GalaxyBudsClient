@@ -166,7 +166,7 @@ public partial class MainWindow : StyledAppWindow
 #if OSX
             // On macOS, re-apply theme to restore blur/transparency effects
             // This is needed because effects don't persist when window is hidden/shown
-            (this as IStyledWindow).ApplyTheme(this);
+            (this as IStyledWindow)?.ApplyTheme(this);
 #endif
                 
             Activate();

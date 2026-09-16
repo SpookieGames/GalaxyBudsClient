@@ -1,10 +1,10 @@
-# tw (Taiwan, Province of China)
+# ar (Argentina)
 
 This file is auto-generated and automatically updated. Do not modify this file manually.
 
 <table>
 <tr><th>Progress</th><th>Count</th></tr>
-<tr><td>61%</td><td>219 missing string(s)</td></tr>
+<tr><td>100%</td><td>No missing strings</td></tr>
 </table>
 
 ### Missing strings

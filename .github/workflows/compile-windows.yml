@@ -89,7 +89,36 @@ jobs:
       shell: bash
       run: echo 'version=${{steps.last_release.outputs.tag}}-${{steps.short-sha.outputs.sha}}' >> $GITHUB_OUTPUT
       id: version
-      
+
+    # Ensure NSIS is installed so makensis is available
+    - name: Install NSIS (if missing)
+      run: choco install nsis -y --no-progress
+
+    - name: Verify makensis is available
+      shell: pwsh
+      run: |
+        # Chocolatey installs NSIS to a standard location
+        # PATH update from choco won't be visible until next step, so check directly
+        $possible = @(
+          Join-Path $env:ProgramFiles 'NSIS\makensis.exe'
+          Join-Path ${env:ProgramFiles(x86)} 'NSIS\makensis.exe'
+        )
+        $found = $false
+        foreach ($p in $possible) {
+          if (Test-Path $p) {
+            Write-Host "Found makensis at: $p"
+            & $p -VERSION
+            $found = $true
+            break
+          }
+        }
+        if (-not $found) {
+          Write-Host "makensis not found in standard locations"
+          Write-Host "Checked paths:"
+          $possible | ForEach-Object { Write-Host "  $_" }
+          throw "makensis not found. NSIS installation may have failed."
+        }
+
     # Make x64 installer
     - name: Download artifact (x64)
       uses: actions/download-artifact@v7
@@ -97,22 +126,26 @@ jobs:
         name: GalaxyBudsClient_win64_portable
         
     - name: Rename artifact (x64)
-      run: ren GalaxyBudsClient.exe "Galaxy Buds Client.exe"
+      shell: pwsh
+      run: |
+        # In download-artifact@v4, artifacts are extracted directly into the current directory
+        $src = Join-Path $PWD 'GalaxyBudsClient.exe'
+        if (-Not (Test-Path $src)) { Write-Host "Listing current directory for debugging"; Get-ChildItem -Recurse | Select-Object FullName; throw "Expected file not found: $src" }
+        Move-Item -Path $src -Destination 'Galaxy Buds Client.exe'
     
     - name: Create nsis installer (x64)
       uses: joncloud/makensis-action@v5.0
       with:
         script-file: "install.nsi"
         arguments: "-DBASE_DIR=\"D:\\a\\GalaxyBudsClient\\GalaxyBudsClient\" -DPRODUCT_VERSION=\"${{steps.version.outputs.version}}\" -DPRODUCT_ARCH=\"64bit\""
+      env:
+        # action expects boolean strings in certain env/input fields; ensure it's a proper boolean-string
+        debug: 'false'
 
     #- name: Sign installer
     #  uses: GabrielAcostaEngler/signtool-code-sign@v1.0.2
     #  with:
     #    certificate: ${{ secrets.SIGN_CERTIFICATE }}
-    #    cert-password: ${{ secrets.SIGN_PASSWORD }}
-    #    cert-sha1: 048de957759a1837a967e61b8c97c442f7b9ec24
-    #    folder: .
-    #    timestamp-server: http://timestamp.digicert.com
 
     - name: Upload artifact (x64)
       uses: actions/upload-artifact@v6
@@ -130,13 +163,20 @@ jobs:
         name: GalaxyBudsClient_win32_portable
         
     - name: Rename artifact (x86)
-      run: ren GalaxyBudsClient.exe "Galaxy Buds Client.exe"
+      shell: pwsh
+      run: |
+        # In download-artifact@v4, artifacts are extracted directly into the current directory
+        $src = Join-Path $PWD 'GalaxyBudsClient.exe'
+        if (-Not (Test-Path $src)) { Write-Host "Listing current directory for debugging"; Get-ChildItem -Recurse | Select-Object FullName; throw "Expected file not found: $src" }
+        Move-Item -Path $src -Destination 'Galaxy Buds Client.exe'
 
     - name: Create nsis installer (x86)
       uses: joncloud/makensis-action@v5.0
       with:
         script-file: "install.nsi"
         arguments: "-DBASE_DIR=\"D:\\a\\GalaxyBudsClient\\GalaxyBudsClient\" -DPRODUCT_VERSION=\"${{steps.version.outputs.version}}\" -DPRODUCT_ARCH=\"32bit\""
+      env:
+        debug: 'false'
 
     #- name: Sign installer
     #  uses: GabrielAcostaEngler/signtool-code-sign@v1.0.2
@@ -165,7 +205,7 @@ jobs:
         repository: timschneeb/GalaxyBudsClient
         releases-only: true
       id: last_release  
-      
+    
     - name: Prepare version information (2/3)
       uses: benjlevesque/short-sha@v3.0
       id: short-sha
@@ -208,7 +248,7 @@ jobs:
         repository: timschneeb/GalaxyBudsClient
         releases-only: true
       id: last_release  
-      
+    
     - name: Prepare version information (2/2)
       uses: benjlevesque/short-sha@v3.0
       id: short-sha
@@ -221,4 +261,3 @@ jobs:
         identifier: timschneeb.GalaxyBudsClient
         version: '${{steps.last_release.outputs.tag}}-${{steps.short-sha.outputs.sha}}'
         token: ${{ secrets.WINGET_TOKEN }}
-

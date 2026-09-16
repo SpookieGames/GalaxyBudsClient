@@ -81,6 +81,7 @@
     <sys:String x:Key="tray_disable_ambient_sound">Desactivar sonido ambiental</sys:String>
     <sys:String x:Key="tray_enable_eq">Activar Ecualizador</sys:String>
     <sys:String x:Key="tray_disable_eq">Desactivar ecualizador</sys:String>
+    <sys:String x:Key="tray_show_battery_details">Show battery details</sys:String>
     <sys:String x:Key="tray_quit">Salir</sys:String>
 
 
@@ -269,6 +270,8 @@
     <!--Advanced page-->
     <sys:String x:Key="adv_header">Avanzado</sys:String>
     <sys:String x:Key="adv_required_firmware_later">{0} o posteroir later</sys:String>
+    <sys:String x:Key="adv_auto_reconnect">Automatic Bluetooth reconnection</sys:String>
+    <sys:String x:Key="adv_auto_reconnect_desc">Automatically reconnect to your earbuds when the connection is lost unexpectedly. Up to 5 retry attempts with smart timeout detection.</sys:String>
     <sys:String x:Key="adv_seamless">Conexión fácil con auriculares</sys:String>
     <sys:String x:Key="adv_seamless_desc">Cambie rápidamente a los dispositivos cercanos sin desconectar sus auriculares ni activar el modo de vinculación</sys:String>
     <sys:String x:Key="adv_resume_playback">Continuar la reproducción si se coloca los Buds en el oido</sys:String>

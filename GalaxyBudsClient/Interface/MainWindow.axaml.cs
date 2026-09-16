@@ -155,6 +155,10 @@ public partial class MainWindow : StyledAppWindow
             
             // Ensure window state is normal before showing
             WindowState = WindowState.Normal;
+            
+            // Reset to fixed dimensions to prevent size drift on repeated opens
+            Width = 700;
+            Height = 640;
                 
             if (PlatformUtils.IsLinux)
             {
@@ -166,7 +170,7 @@ public partial class MainWindow : StyledAppWindow
 #if OSX
             // On macOS, re-apply theme to restore blur/transparency effects
             // This is needed because effects don't persist when window is hidden/shown
-            (this as IStyledWindow).ApplyTheme(this);
+            (this as IStyledWindow)?.ApplyTheme(this);
 #endif
                 
             Activate();
